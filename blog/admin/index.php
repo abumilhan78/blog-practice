@@ -1,3 +1,13 @@
+<?php
+session_start();
+if (!isset($_SESSION['login'])) {
+    echo "<script>
+        alert('Anda Harus Login Terlebih Dahulu');
+        window.location = '../login.php';
+  </script>";
+} else {
+    ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -45,7 +55,7 @@
         <!-- Sidebar Navigation Menus-->
         <div class="main-menu">
           <h5 class="sidenav-heading">Main</h5>
-          <ul id="side-main-menu" class="side-menu list-unstyled">                  
+          <ul id="side-main-menu" class="side-menu list-unstyled">
             <li><a href="index.html"> <i class="icon-home"></i>Home                             </a></li>
             <li><a href="forms.html"> <i class="icon-form"></i>Forms                             </a></li>
             <li><a href="charts.html"> <i class="fa fa-bar-chart"></i>Charts                             </a></li>
@@ -64,7 +74,7 @@
         </div>
         <div class="admin-menu">
           <h5 class="sidenav-heading">Second menu</h5>
-          <ul id="side-admin-menu" class="side-menu list-unstyled"> 
+          <ul id="side-admin-menu" class="side-menu list-unstyled">
             <li> <a href="#"> <i class="icon-screen"> </i>Demo</a></li>
             <li> <a href="#"> <i class="icon-flask"> </i>Demo
                 <div class="badge badge-info">Special</div></a></li>
@@ -86,22 +96,22 @@
                 <!-- Notifications dropdown-->
                 <li class="nav-item dropdown"> <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-bell"></i><span class="badge badge-warning">12</span></a>
                   <ul aria-labelledby="notifications" class="dropdown-menu">
-                    <li><a rel="nofollow" href="#" class="dropdown-item"> 
+                    <li><a rel="nofollow" href="#" class="dropdown-item">
                         <div class="notification d-flex justify-content-between">
                           <div class="notification-content"><i class="fa fa-envelope"></i>You have 6 new messages </div>
                           <div class="notification-time"><small>4 minutes ago</small></div>
                         </div></a></li>
-                    <li><a rel="nofollow" href="#" class="dropdown-item"> 
+                    <li><a rel="nofollow" href="#" class="dropdown-item">
                         <div class="notification d-flex justify-content-between">
                           <div class="notification-content"><i class="fa fa-twitter"></i>You have 2 followers</div>
                           <div class="notification-time"><small>4 minutes ago</small></div>
                         </div></a></li>
-                    <li><a rel="nofollow" href="#" class="dropdown-item"> 
+                    <li><a rel="nofollow" href="#" class="dropdown-item">
                         <div class="notification d-flex justify-content-between">
                           <div class="notification-content"><i class="fa fa-upload"></i>Server Rebooted</div>
                           <div class="notification-time"><small>4 minutes ago</small></div>
                         </div></a></li>
-                    <li><a rel="nofollow" href="#" class="dropdown-item"> 
+                    <li><a rel="nofollow" href="#" class="dropdown-item">
                         <div class="notification d-flex justify-content-between">
                           <div class="notification-content"><i class="fa fa-twitter"></i>You have 2 followers</div>
                           <div class="notification-time"><small>10 minutes ago</small></div>
@@ -112,17 +122,17 @@
                 <!-- Messages dropdown-->
                 <li class="nav-item dropdown"> <a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-envelope"></i><span class="badge badge-info">10</span></a>
                   <ul aria-labelledby="notifications" class="dropdown-menu">
-                    <li><a rel="nofollow" href="#" class="dropdown-item d-flex"> 
+                    <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
                         <div class="msg-profile"> <img src="../assets/template/admin/distribution/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
                         <div class="msg-body">
                           <h3 class="h5">Jason Doe</h3><span>sent you a direct message</span><small>3 days ago at 7:58 pm - 10.06.2014</small>
                         </div></a></li>
-                    <li><a rel="nofollow" href="#" class="dropdown-item d-flex"> 
+                    <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
                         <div class="msg-profile"> <img src="../assets/template/admin/distribution/img/avatar-2.jpg" alt="..." class="img-fluid rounded-circle"></div>
                         <div class="msg-body">
                           <h3 class="h5">Frank Williams</h3><span>sent you a direct message</span><small>3 days ago at 7:58 pm - 10.06.2014</small>
                         </div></a></li>
-                    <li><a rel="nofollow" href="#" class="dropdown-item d-flex"> 
+                    <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
                         <div class="msg-profile"> <img src="../assets/template/admin/distribution/img/avatar-3.jpg" alt="..." class="img-fluid rounded-circle"></div>
                         <div class="msg-body">
                           <h3 class="h5">Ashley Wood</h3><span>sent you a direct message</span><small>3 days ago at 7:58 pm - 10.06.2014</small>
@@ -215,35 +225,35 @@
                 <h2 class="display h4">To do List</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 <ul class="check-lists list-unstyled">
-                  <li class="d-flex align-items-center"> 
+                  <li class="d-flex align-items-center">
                     <input type="checkbox" id="list-1" name="list-1" class="form-control-custom">
                     <label for="list-1">Similique sunt in culpa qui officia</label>
                   </li>
-                  <li class="d-flex align-items-center"> 
+                  <li class="d-flex align-items-center">
                     <input type="checkbox" id="list-2" name="list-2" class="form-control-custom">
                     <label for="list-2">Ed ut perspiciatis unde omnis iste</label>
                   </li>
-                  <li class="d-flex align-items-center"> 
+                  <li class="d-flex align-items-center">
                     <input type="checkbox" id="list-3" name="list-3" class="form-control-custom">
                     <label for="list-3">At vero eos et accusamus et iusto </label>
                   </li>
-                  <li class="d-flex align-items-center"> 
+                  <li class="d-flex align-items-center">
                     <input type="checkbox" id="list-4" name="list-4" class="form-control-custom">
                     <label for="list-4">Explicabo Nemo ipsam voluptatem</label>
                   </li>
-                  <li class="d-flex align-items-center"> 
+                  <li class="d-flex align-items-center">
                     <input type="checkbox" id="list-5" name="list-5" class="form-control-custom">
                     <label for="list-5">Similique sunt in culpa qui officia</label>
                   </li>
-                  <li class="d-flex align-items-center"> 
+                  <li class="d-flex align-items-center">
                     <input type="checkbox" id="list-6" name="list-6" class="form-control-custom">
                     <label for="list-6">At vero eos et accusamus et iusto </label>
                   </li>
-                  <li class="d-flex align-items-center"> 
+                  <li class="d-flex align-items-center">
                     <input type="checkbox" id="list-7" name="list-7" class="form-control-custom">
                     <label for="list-7">Similique sunt in culpa qui officia</label>
                   </li>
-                  <li class="d-flex align-items-center"> 
+                  <li class="d-flex align-items-center">
                     <input type="checkbox" id="list-8" name="list-8" class="form-control-custom">
                     <label for="list-8">Ed ut perspiciatis unde omnis iste</label>
                   </li>
@@ -329,7 +339,7 @@
                 <div id="updates-box" role="tabpanel" class="collapse show">
                   <ul class="news list-unstyled">
                     <!-- Item-->
-                    <li class="d-flex justify-content-between"> 
+                    <li class="d-flex justify-content-between">
                       <div class="left-col d-flex">
                         <div class="icon"><i class="icon-rss-feed"></i></div>
                         <div class="title"><strong>Lorem ipsum dolor sit amet.</strong>
@@ -341,7 +351,7 @@
                       </div>
                     </li>
                     <!-- Item-->
-                    <li class="d-flex justify-content-between"> 
+                    <li class="d-flex justify-content-between">
                       <div class="left-col d-flex">
                         <div class="icon"><i class="icon-rss-feed"></i></div>
                         <div class="title"><strong>Lorem ipsum dolor sit amet.</strong>
@@ -353,7 +363,7 @@
                       </div>
                     </li>
                     <!-- Item-->
-                    <li class="d-flex justify-content-between"> 
+                    <li class="d-flex justify-content-between">
                       <div class="left-col d-flex">
                         <div class="icon"><i class="icon-rss-feed"></i></div>
                         <div class="title"><strong>Lorem ipsum dolor sit amet.</strong>
@@ -365,7 +375,7 @@
                       </div>
                     </li>
                     <!-- Item-->
-                    <li class="d-flex justify-content-between"> 
+                    <li class="d-flex justify-content-between">
                       <div class="left-col d-flex">
                         <div class="icon"><i class="icon-rss-feed"></i></div>
                         <div class="title"><strong>Lorem ipsum dolor sit amet.</strong>
@@ -377,7 +387,7 @@
                       </div>
                     </li>
                     <!-- Item-->
-                    <li class="d-flex justify-content-between"> 
+                    <li class="d-flex justify-content-between">
                       <div class="left-col d-flex">
                         <div class="icon"><i class="icon-rss-feed"></i></div>
                         <div class="title"><strong>Lorem ipsum dolor sit amet.</strong>
@@ -389,7 +399,7 @@
                       </div>
                     </li>
                     <!-- Item-->
-                    <li class="d-flex justify-content-between"> 
+                    <li class="d-flex justify-content-between">
                       <div class="left-col d-flex">
                         <div class="icon"><i class="icon-rss-feed"></i></div>
                         <div class="title"><strong>Lorem ipsum dolor sit amet.</strong>
@@ -572,3 +582,4 @@
     <script src="../assets/template/admin/distribution/js/front.js"></script>
   </body>
 </html>
+<?php }?>
